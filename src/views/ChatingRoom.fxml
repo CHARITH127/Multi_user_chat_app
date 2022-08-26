@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="667.0" prefWidth="693.0" style="-fx-background-color: #ebd9dd;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ClientFromController">
+    <children>
+        <Label prefHeight="43.0" prefWidth="693.0" style="-fx-background-color: #d8aed3;" text="Chat wall">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+            <padding>
+                <Insets left="13.0" />
+            </padding>
+        </Label>
+        <ScrollPane fx:id="sp_main" fitToWidth="true" layoutX="14.0" layoutY="52.0" prefHeight="470.0" prefWidth="618.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+            <content>
+                <VBox fx:id="vbox_messages" prefHeight="468.0" prefWidth="616.0" />
+            </content>
+        </ScrollPane>
+        <TextField fx:id="txtmesageBox" layoutX="14.0" layoutY="533.0" prefHeight="36.0" prefWidth="410.0" />
+        <Button fx:id="btnFileChooser" layoutX="442.0" layoutY="533.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="35.0" style="-fx-background-color: transparent;">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Button fx:id="btnSendMessage" layoutX="552.0" layoutY="533.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="128.0" style="-fx-background-color: #486989;" text="Send" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <ImageView fitHeight="28.0" fitWidth="36.0" layoutX="448.0" layoutY="537.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../asessts/imageUplad.jpg" />
+            </image>
+        </ImageView>
+        <Button layoutX="490.0" layoutY="533.0" mnemonicParsing="false" onAction="#visibaleIImojiPanal" prefHeight="36.0" prefWidth="46.0">
+            <graphic>
+                <ImageView fitHeight="27.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../asessts/imoji.jpg" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <AnchorPane fx:id="imojiContext" layoutX="19.0" layoutY="578.0" prefHeight="72.0" prefWidth="659.0" visible="true">
+            <children>
+                <VBox prefHeight="61.0" prefWidth="659.0">
+                    <children>
+                        <HBox prefHeight="62.0" prefWidth="659.0" spacing="87.0">
+                            <children>
+                                <ImageView fitHeight="53.0" fitWidth="53.0" onMouseClicked="#setCryImojeOnAction" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../asessts/CryingFaceEmoji.png" />
+                                    </image>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </ImageView>
+                                <ImageView fitHeight="53.0" fitWidth="53.0" onMouseClicked="#setKissImojeOnAction" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../asessts/BlowKissEmoji.png" />
+                                    </image>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </ImageView>
+                                <ImageView fitHeight="53.0" fitWidth="53.0" onMouseClicked="#setLaughImojeOnAction" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../asessts/SmilingFaceEmoji.png" />
+                                    </image>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </ImageView>
+                                <ImageView fitHeight="53.0" fitWidth="53.0" onMouseClicked="#setHungryImojeOnAction" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../asessts/HungryFaceEmoji.png" />
+                                    </image>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </ImageView>
+                                <ImageView fitHeight="53.0" fitWidth="53.0" onMouseClicked="#setAngrymojeOnAction" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../asessts/VeryAngryEmoji.png" />
+                                    </image>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </ImageView>
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

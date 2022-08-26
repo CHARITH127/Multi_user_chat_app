@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginContext" prefHeight="503.0" prefWidth="783.0" style="-fx-background-color: #ebd9dd;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginFormController">
+   <children>
+      <Label fx:id="loginHeading" prefHeight="42.0" prefWidth="783.0" style="-fx-background-color: #d8aed3;" text="Live Chat">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <padding>
+            <Insets left="12.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="txtCustomerLogin" layoutX="152.0" layoutY="298.0" opacity="0.8" prefHeight="26.0" prefWidth="277.0" />
+      <Button layoutX="436.0" layoutY="298.0" mnemonicParsing="false" onAction="#loginToChatOnAction" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #486989;" text="Login" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="292.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asessts/profile pic.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
